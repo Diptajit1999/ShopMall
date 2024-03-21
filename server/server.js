@@ -7,6 +7,12 @@ app.use(express.json())
 
 
 
-app.listen(Port,()=>{
-    console.log(`server is running at Port ${Port}`)
+app.listen(Port,async()=>{
+    try {
+        await connection;
+        console.log(`server is running at Port ${Port}`)
+    } catch (error) {
+        console.log(error)
+    }
+    
 })
