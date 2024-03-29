@@ -1,11 +1,11 @@
 const express=require("express")
-const {Register}=require("../../Controllers/user.controller")
+const {Register}=require("../../Controllers/admin.controller")
 const adminRouter=new express.Router()
 
 // admin auth routes
 
 
-// adminRouter.get("/admin",)
+adminRouter.post("/register",Register)
 
 
 module.exports={
